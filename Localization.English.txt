@@ -2,7 +2,7 @@
 quest.name,Curse of Set (v1.8)
 quest.authors_short,Nicola Zee
 quest.description,"Kathleen Ross, a reporter, was investigating rumors that exhibits at the Miskatonic Museum are coming to life. \nShe witnessed Professor Smith standing in the Lecture Hall chanting in a guttural alien language.\nThe next day, Kathleen was arrested for the theft of a citrine snake statue.\nShe needs your help to clear her name by recovering the snake statue, and discovering what the Professor is involved in.\n\n<b>There is some translation of basic Hieroglyphs.  This has been simplified for gameplay purposes and all information is accessible from the app.  Notepads may be useful, and there are 'Hint' buttons to provide additional help, should you need it.</b>\n\nIf the expansion 'Curse of Set' is enabled, the custom 'Exhibition Hall' medium tile will be used.  This tile must be printed out.  The Curse of Set package can be downloaded.\nhttps://github.com/NicolaZee/CoS_Package"
-quest.authors,"Designer: Nicola Zee\n\nOriginal Portal Puzzle Code designed by Anton Timmermans.\nExhibition Hall tile designed by Gavin Bourchier.\nProofread by Sail (Osiris Saline)"
+quest.authors,"Designer: Nicola Zee\n\nOriginal Portal Puzzle Code designed by Anton Timmermans.\nExhibition Hall tile designed by Gavin Bourchier.\nProofread by Sail (Osiris Saline)."
 quest.synopsys,Investigate Professor Smith who is organising a new exhibition and clear your friend's name.
 CCYAN,<color=Cyan>
 COFF,</color>
@@ -80,7 +80,7 @@ EventPlaceEntranceToScienceHall.button1,{qst:CONTINUE}
 EventPlaceDials.text," On the nearest large table is a large electronic machine of an unusual design with a set of five dials.\n\n{qst:PLACEINTERACT}"
 TokenLeaflet.text,Leaflets are scattered over the top of the desk.
 EventLeafletPickup.text,"You approach the desk to look more closely at the leaflets.\nThe security guard starts to gather them up.\n\nTest ({agility},2)."
-EventLeafletPickupPass.text,"You pick up a couple of leaflets before the guard can grab them all.\nHe says,\n<i>Hey, give them back!\nProfessor Smith shouted at me the leaflets must not be given out!</i>\n\nYou hand the leaflets over but you keep back one.\nYou hide the leaflet in your pocket.\n\nDiscard the Search token."
+EventLeafletPickupPass.text,"You pick up a couple of leaflets before the guard can grab them all.\nHe says,\n<i>Hey, give them back!\nProfessor Smith shouted at me the leaflets must not be given out!</i>\n\nYou hand the leaflets over but you keep one back.\nYou hide the leaflet in your pocket.\n\nDiscard the Search token."
 EventLeafletPickup.button1,{qst:PASS}
 EventLeafletPickup.button2,{qst:FAIL}
 EventLeafletPickupFail.button1,{qst:CONTINUE}
@@ -95,7 +95,7 @@ TokenPortraitHallToPaleoHall.text,"The long hall connects to a large room which 
 TokenPortraitHallToPaleoHall.button1,{qst:REVEAL}
 EventPlacePaleoHall.button1,{qst:CONTINUE}
 EventPlacePaleoHallShock_Pass.button1,{qst:CONTINUE}
-EventPlacePaleoHallDinosaur.text,"The huge articulated skeleton of the Tyranosaurus Rex is posed on two huge legs, rearing up with its skull almost touching the high ceiling.\n\n{qst:PLACESIGHT}"
+EventPlacePaleoHallDinosaur.text,"The huge articulated skeleton of the Tyrannosaurus Rex is posed on two huge legs, rearing up with its skull almost touching the high ceiling.\n\n{qst:PLACESEARCH}"
 EventPlacePaleoHallDinosaur.button1,{qst:CONTINUE}
 TokenEntranceToScienceHall.text,"A large sign reads\n<i>Science Hall</i>.\n\nThe view into the long hall is obscured by the large imposing front desk.\n\n{qst:REVEALSIGHT_SPACE}"
 EventPlaceScienceHall.text,"You lean past the front desk and see a hall packed full of scientific equipment.\nOn tables and in cabinets, diverse machines illustrate the history of science.\n\nPlace the {c:TileScienceHall} tile.\n\n{qst:DISCARDREVEAL}"
@@ -104,7 +104,7 @@ EventPlaceEntranceToStudy.text,"There is a door to your right,\n{qst:DOORSTUDY}"
 EventPlacePaleoHallShock.button2,{qst:FAIL}
 EventPlacePaleoHallShock.text,"Something huge with giant teeth towers over you.\n\nTest ({will},2)\nRoll an additional die if you in a space with a light source."
 EventPlacePaleoHallShock_Fail.text,"The thing swings its massive head towards you.\n\nSuffer 1 Horror.\n\nYour eyes adjust to the light,\nYou realise you are seeing a huge skeleton of a long dead two legged dinosaur. The bones are held rigidly in place.\nYour eyes must have been playing tricks.\n\nFlip the Horror facedown."
-EventPlacePaleoHallShock_Pass.text,You realise what you see is an impressively large skeleton of a Tyranosaurus Rex.
+EventPlacePaleoHallShock_Pass.text,You realise what you see is an impressively large skeleton of a Tyrannosaurus Rex.
 EventPlacePaleoHall.text,"The exhibits in the room loom above and around you.\n\nPlace the {c:TilePaleoHall} tile.\n\n{qst:DISCARDREVEAL}"
 EventPlacePaleoHallShock_Fail.button1,{qst:CONTINUE}
 EventPlacePaleoHallToExhibition.button1,{qst:CONTINUE}
@@ -301,8 +301,7 @@ EventWorkshopItem.button1,{qst:SEARCH}
 EventGainRandomItemSkull.button1,{qst:CONTINUE}
 EventLibraryBookRestricted.text,"The librarian brings you a weighty and ominous looking tome.\nThe disturbing text and images present a horrifically bleak view of the petty unimportance of human existence.\nYou expend you mind but only by calling into question all you know.\n\nGain 1 {clue}.\nYou may spend 2 {clue} to improve {lore}.\nThen suffer 2 Horror ({will} negates)."
 TokenChamberThrone.text,"The giant stone throne fills the back of the chamber.\nThe throne is buried under rubble fallen from the roof and the wall.\nIf there is still rubble in the space, it prevents you from examining the item in more detail."
-EventThroneInteract.button1,Continue
-EventReviewLeaflet.button1,Button1
+EventThroneInteract.button1,{qst:CONTINUE}
 EventGainRitual.text,"You carefully gather up the pages.\nThey form part of a banishment spell.\n{qst:DOCTOR} has translated the hieroglyphs carved on the artifacts and walls of the chamber to almost complete the spell.\n \nGain the {c:QItemRitual} {qst:UNIQUEITEM}."
 EventGainRitual.button1,{qst:CONTINUE}
 EventLeafletPickupPass.button1,{qst:CONTINUE}
@@ -310,7 +309,7 @@ EventPlacePortalInfo.text,On this wall are large information boards.
 EventPlacePortalInfo.button1,{qst:CONTINUE}
 TokenInfoBoard.button1,{qst:SEARCH}
 EventInfoBoardSeach.button1,{qst:CONTINUE}
-EventPortalOff.button1,Continue
+EventPortalOff.button1,{qst:CONTINUE}
 TokenWorkshopBoxes.button1,{action} Stack Boxes
 EventStudyDeskGoWorkshop.button1,{qst:CONTINUE}
 EventGainRandomItemDisc.text,"A strange disc from a far off land catches your eye.\n\nGain the {c:QItemDisc} {qst:COMMONITEM}."
@@ -323,7 +322,6 @@ TokenWorkshopStorage.text,This door leads into a small storage area.
 EventWorkshopStorageSearch.text,"You rummage through the items in storage.\nThey are covered in dust.\nYou doubt anyone will notice if one of them goes missing.\n\n{qst:DISCARDSEARCH}"
 EventWorkshopStorageSearch.button1,{qst:CONTINUE}
 EventPlaceWorkshopStorage.text,There is a door leading to a small storage area.
-EventGainRandomItem.button1,Button1
 EventGainRandomItemPendant.text,"An interesting pendant catches your eye,\n\nGain the {c:QItemPendant}  {qst:COMMONITEM}."
 EventGainRandomItemPendant.button1,{qst:CONTINUE}
 EventStudyDeskGoStudySafe.button1,{qst:CONTINUE}
@@ -490,8 +488,8 @@ EventLibrarianTalkDoctor.text,"<i>{qst:DOCTOR} has been taking up far too much o
 EventLibrarianTalkDoctor.button1,{qst:CONTINUE}
 EventLibrarian1Talk_Access_Doctor.button3,{qst:NEVERMIND}
 EventLibrarianTalkDoctorStudy.text,"<i>He should be spending more time catching up on his paperwork in his study!</i>\n\nGain 1 {clue}."
+EventPortalCodeRight.text,"Electricity sparks off the faraday cage to your right.\nInside you can see a portal to a chamber.\nThe chamber is buried in sand and rubble."
 EventPortalCodeRight.button1,{qst:CONTINUE}
-EventPortalCodeRight.text,"Electricity sparks off the faraday cage to your right.\nInside you can see a portal to a chamber buried in sand."
 EventPortalMuseum.text,"A swirling black portal has opened inside the cage.\nYou glimpse fleeting images of the halls in the Museum including a brief vision of the main Exhibition Hall.\nYou may use an {action} to enter the portal."
 EventDialSetZeroPortalIsOff.button1,{qst:CONTINUE}
 EventDialSetOff.button1,Button1
@@ -756,7 +754,7 @@ EventGuardPaleoPersuade.text,"You shout at the guard he must flee for his life!\
 EventGuardPaleoDinosaur.button2,{action} Shake some sense into him.
 EventGuardPaleoPass.button1,{qst:CONTINUE}
 EventGuardPaleoPersuade.button1,{qst:PASS}
-EventGuardPaleoPass.text,"The guard comes to his senses and runs off.\nYou neither know nor care where he goes as long as he is safe for now.  His rescue gives you new hope.\n\nDiscard the Person token from the indicated space.\nGain the Focussed Condition."
+EventGuardPaleoPass.text,"The guard comes to his senses and runs off.\nYou neither know nor care where he goes as long as he is safe for now.  His rescue gives you new hope.\n\n{	qst:DISCARDPERSON}\nGain the Focussed Condition."
 EventGuardPaleoFail.text,The guard stands frozen in terror.
 EventGuardPaleoFail.button1,{qst:CONTINUE}
 EventGuardPaleoIntimidate.text,"You grab the guard by the lapels of his uniform and try to shake some sense into him.\n\nTest ({strength},2)"
@@ -785,7 +783,7 @@ EventProfessorBanishManuscriptNotRead.text,"You realise there is a key part of t
 EventProfessorBanish.button1,{action} Call out his true name.
 EventProfessorBanishManuscriptNotRead.button1,{qst:CONTINUE}
 EventProfessorBanish.button2,{qst:CANCEL}
-EventBanishSuccess.text,"You command Imhotep by his true name of power.\nHis spirit comes out of his mouth as a serpentine protrusion of ectoplasm.\nThe Professor, free of his malign influence, flees the Exhibition Hall.\n\nDiscard the Person token from the indicated space.\n\nYou may flip one Horror facedown."
+EventBanishSuccess.text,"You command Imhotep by his true name of power.\nHis spirit comes out of his mouth as a serpentine protrusion of ectoplasm.\nThe Professor, free of his malign influence, flees the Exhibition Hall.\n\n{qst:DISCARDPERSON}\n\nYou may flip one Horror facedown."
 EventBanishStatueFound.button1,{qst:CONTINUE}
 EventBanishStatueNotFound.text,A cloud of ectoplasim swirls arounds the main relics of the exhibition and vanishes.
 EventBanishStatueNotFound.button1,{qst:CONTINUE}
@@ -814,12 +812,12 @@ EventDinosaurAttackAlly.text,Which person is within one space?
 EventDinosaurAttackAlly.button1,The Security Guard
 EventDinosaurAttackAlly.button2,The Research Student
 EventDinosaurAttackAlly.button3,{qst:DOCTOR}
-EventDinosaurAttackGuard.text,"The guard freezes in terror.\nThe huge jaws slam shut.\nThe guard is cut in two.\nThe two parts of what remains of his body drop onto the floor.\n\nDiscard the Person token from the indicated space.\nAll investigators suffer 1 Horror."
+EventDinosaurAttackGuard.text,"The guard freezes in terror.\nThe huge jaws slam shut.\nThe guard is cut in two.\nThe two parts of what remains of his body fall to the floor in a torrent of blood.\n\n{qst:DISCARDPERSON}\nAll investigators suffer 1 Horror."
 EventDinosaurAttackGuard.button1,{qst:CONTINUE}
-EventDinosaurAttackResearcher.text,"The student screams and attempts to dive out of the way, but trips.\nThe front leg of the skeletal monstrosity comes forward and crashes down on his back.\nHuge claws sink into his body and tears off large chunks of flesh.\n\nDiscard the Person token from the indicated space.\nAll investigators suffer 1 Horror."
+EventDinosaurAttackResearcher.text,"The student screams and attempts to dive out of the way, but trips.\nThe front leg of the skeletal monstrosity comes forward and crashes down on his back.\nHuge claws sink into his body and tears off large chunks of flesh.\n\n{qst:DISCARDPERSON}\nAll investigators suffer 1 Horror."
 EventDinosaurAttackResearcher.button1,{qst:CONTINUE}
 EventDinosaurAttackAlly.button4,{qst:REPORTER}
-EventDinosaurAttackDoctor.text,"{qst:DOCTOR} is too weak to move.\nBefore the creature can even begin its attack, he dies of shock.\n\nDiscard the Person token from the indicated space.\nAll investigators suffer 1 Horror."
+EventDinosaurAttackDoctor.text,"{qst:DOCTOR} is too weak to move.\nBefore the creature can even begin its attack, he dies of shock.\n\n{qst:DISCARDPERSON}\nAll investigators suffer 1 Horror."
 EventDinosaurAttackDoctor.button1,{qst:CONTINUE}
 EventPlacePortraitHallWeapon.text,"To your right is a collection of items connected with famous explorers.\nThere is a collection of ancient weapons hanging on the wall above a display cabinet.\n\nPlace a Search Token as indicated."
 EventPlacePortraitHallWeapon.button1,{qst:CONTINUE}
@@ -1004,9 +1002,3 @@ EventMapTilesCoS.text,"<b>Base Game</b> {MAD20}\nStudy\nStreet 2\n\n<b>Streets o
 EventMapTilesCoS.button1,{qst:CONTINUE}
 EventMapTilesDefault.text,"<b>Base Game</b> {MAD20}\nStudy\nStreet 2\n\n<b>Streets of Arkham</b> {MAD21}\nExhibit Entrance\nPortrait Hall\nExhibit 2\nExhibit 3\nMain Exhibit\nClassroom 1\nResearch Library\nWarehouse\n\n<b>Path of the Serpant</b> {MAD28}\nThrone Chamber\nJungle Ruins 1\nHall Chamber 2"
 EventMapTilesDefault.button1,{qst:CONTINUE}
-EventBlackboardResult.button1,Button1
-EventExhibitChestResult.button1,Button1
-EventExhibitCoffinResult.button1,Button1
-EventExhibitBoatResult.button1,Button1
-EventExhibitShrineResult.button1,Button1
-EventFinaleBuryStatue.button1,Button1
