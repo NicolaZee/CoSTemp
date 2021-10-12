@@ -265,7 +265,6 @@ EventLibraryBookExpedition.text,"An article describes a dig Professor Smith part
 EventEntranceToStudyGuarded.text,{qst:DOORSTUDY}
 EventGuardTalk_Leaflets_Lights.button2,{action} <i>You should go fix the lights!</i>
 TokenExhibitCoffin.button1,Button1
-EventLibrarianTalkDoctorStudy.button1,{qst:CONTINUE}
 EventLibrarianTalkDoctorWorkshop.text,"<i>He should be spending more time in the workshop catching up on his restoration work</i>!\n\n{qst:GAINCLUE}"
 EventLibrarianTalkDoctorWorkshop.button1,{qst:CONTINUE}
 EventGainRevolver.button1,{qst:CONTINUE}
@@ -483,7 +482,8 @@ EventPlacePortal.text,To the right of the table is a faraday cage large enough f
 EventPlacePortal.button1,Continue
 EventLibrarianTalkDoctor.text,"<i>{qst:DOCTOR} has been taking up far too much of my valuable time.\nIt has taken me a great deal of effort to track down for him an especially rare papyrus and manuscript.</i>"
 EventLibrarianTalkDoctor.button1,{qst:CONTINUE}
-EventLibrarianTalkDoctorStudy.text,"<i>He should be spending more time catching up on his paperwork in his study!</i>\n\nGain 1 {clue}."
+EventLibrarianTalkDoctorStudy.text,"<i>He should be spending more time catching up on his paperwork in his study!</i>\n\n{qst:GAINCLUE}"
+EventLibrarianTalkDoctorStudy.button1,{qst:CONTINUE}
 EventPortalCodeRight.text,"Electricity sparks off the faraday cage to your right.\nInside you can see a portal to a chamber.\nThe chamber is buried in sand and rubble."
 EventPortalCodeRight.button1,{qst:CONTINUE}
 EventPortalMuseum.text,"A swirling black portal has opened inside the cage.\nYou glimpse fleeting images of the halls in the Museum including a brief vision of the main Exhibition Hall.\nYou may use an {action} to enter the portal."
@@ -608,7 +608,7 @@ EventPortalFuture.button1,{action} Enter the Portal.
 SpawnSkeleton1.text,"{qst:DOCTOR} cries out,<i>\nBeware!\nThe necromancer has called up the undead!</i>\n\nThe skeleton of a long dead archaeologist bursts through the door and crawls its way through the rubble."
 SpawnSkeleton1.button1,{qst:CONTINUE}
 EventChamberExitLeaveDoctor.button2,{qst:CANCEL}
-EventChamberExitLeaveDoctor.text,"You step in front of the portal and start to read out the words of the banishment spell.\n<i>{qst:DOCTOR} cries out,\nPlease help me!\nDon't leave me here to die!\n</i>\nAre you going to ignore his calls for help?"
+EventChamberExitLeaveDoctor.text,"You step in front of the portal and start to read out the words of the banishment spell.\n{qst:DOCTOR} cries out,\n<i>Please help me!\nDon't leave me here to die!\n</i>\nAre you going to ignore his calls for help?"
 EventChamberExit.button1,{qst:CONTINUE}
 EventChamberExitLeaveDoctorYes.text,"His piteous cries haunt you as you enter the portal.\nThe gate fluctutes in size causing an enormous cave-in.\n {qst:DOCTOR} is buried alive.\n\nSuffer 1 Horror."
 EventDoctor1Escape1NeedName.button1,{qst:CONTINUE}
